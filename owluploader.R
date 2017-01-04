@@ -4,9 +4,9 @@ library(readr)
 ## some temporary directory where you've copied the files to locally), facilityMD5FileName is the MD5 file supplied 
 ## by the sequencing facility, considered "correct" for the purposes of this script, and owlDir is the directory where files 
 ## will be copied to in Owl
-dataDir <- "~/Documents/OwlUploader/"
-facilityMD5FileName <- "md5sums.txt"
-owlDir <- "~/Documents/OwlUploader/testDir/"
+dataDir <- "Input Data Dir Here"
+facilityMD5FileName <- "File Name Here"
+owlDir <- "Input Owl Directory Here"
 
 ## Main Logic loop, First three if statements are checks to make sure the user has updated the script with directories
 ## and the MD5 file to ensure correct operation. If any of the criteria are not met, script stops automatically.
