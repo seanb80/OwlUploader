@@ -65,6 +65,7 @@ if(dataDir == "Input Data Dir Here" )   {
       if (facility.MD5s$md5[which(facility.MD5s$name == file.MD5s$name[i])] == tempMD5)   {
         system(paste0("echo ", file.MD5s$name[i], " >> readme.MD"))
         system(paste0("echo ", tempMD5, "  ", file.MD5s$name[i] ,">> checksum.MD5"))
+        print(paste(file.MD5s$name[i], "copied sucessfully"))
       }else   {
         print("Copy Failure. Produced incorrect MD5")
         system("rm ", owlDir, "/", file.MD5s$name[i], intern = FALSE)
