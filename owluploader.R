@@ -1,4 +1,9 @@
-library(readr)
+if(!require(readr))   {
+   install.packages("readr")
+   library(readr)
+} else {
+  library(readr)
+}
 
 ## The three lines below are user supplied. dataDir is where the data currently is located (either mounted FTP directory or 
 ## some temporary directory where you've copied the files to locally), facilityMD5FileName is the MD5 file supplied 
