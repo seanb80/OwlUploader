@@ -61,7 +61,7 @@ if(dataDir == "Input Data Dir Here" )   {
     # removes the file from owl, and then stops the script
     }else if(facility.MD5s$md5[which(facility.MD5s$name == file.MD5s$name[i])] == file.MD5s$md5[i]) {
       system(paste0("scp ", dataDir, file.MD5s$name[i], " ", owlDir))
-      tempMD5 <- substr(system(paste0("md5sum ",owlDir, "/", filenames[1]), intern = TRUE),1 , 32)
+      tempMD5 <- substr(system(paste0("md5sum ",owlDir, "/", filenames[i]), intern = TRUE),1 , 32)
       if (facility.MD5s$md5[which(facility.MD5s$name == file.MD5s$name[i])] == tempMD5)   {
         system(paste0("echo ", file.MD5s$name[i], " >> readme.MD"))
         system(paste0("echo ", tempMD5, "  ", file.MD5s$name[i] ,">> checksum.MD5"))
